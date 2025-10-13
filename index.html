@@ -1,467 +1,161 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dịch vụ cho thuê máy chủ Game Việt Nam - Minecraft Server Hosting #1 Vietnam AsakaCloud">
-    <title>AsakaCloud - Minecraft Server Hosting #1 Vietnam</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="https://img.zyndata.vn/asakacloud.svg" alt="AsakaCloud" class="logo-img">
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title animate-on-scroll">
+                Minecraft Server Hosting 
+                <span class="highlight glow-text">#1 Vietnam</span>
+            </h1>
+            <h2 class="hero-subtitle animate-on-scroll">Dịch vụ cho thuê máy chủ Game Việt Nam</h2>
+            <p class="hero-description animate-on-scroll">
+                AsakaCloud tự hào là một trong những dịch vụ cho thuê máy chủ tốt nhất tại Việt Nam, 
+                cung cấp giải pháp lưu trữ máy chủ trò chơi trực tuyến chất lượng cao với giá cả phải chăng.
+            </p>
+            <div class="hero-buttons animate-on-scroll">
+                <a href="{{ url_for('services') }}" class="btn btn-primary-large pulse-animation">Tạo máy chủ Game</a>
+                <a href="https://discord.gg/asakacloud" class="btn btn-secondary-large">Tư vấn ngay về máy chủ</a>
+            </div>
+            
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat-item">
+                    <div class="stat-number">5,000+</div>
+                    <div class="stat-label">Khách hàng</div>
                 </div>
-                <div class="nav-links">
-                    <a href="#features">Tính năng</a>
-                    <a href="#pricing">Bảng giá</a>
-                    <a href="#hardware">Phần cứng</a>
-                    <a href="https://id.asakacloud.vn/store" class="btn-primary">Tạo máy chủ</a>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Hỗ trợ</div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Minecraft Server Hosting <span class="highlight">#1 Vietnam</span></h1>
-                <h2 class="hero-subtitle">Dịch vụ cho thuê máy chủ Game Việt Nam</h2>
-                <p class="hero-description">
-                    AsakaCloud tự hào là một trong những dịch vụ cho thuê máy chủ tốt nhất tại Việt Nam, 
-                    cung cấp giải pháp lưu trữ máy chủ trò chơi trực tuyến chất lượng cao với giá cả phải chăng.
+<section id="features" class="features">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Asaka Cloud có gì?</h2>
+        <p class="section-subtitle animate-on-scroll">
+            Chúng tôi mang đến những ưu điểm vượt trội để đảm bảo trải nghiệm máy chủ tốt nhất cho bạn
+        </p>
+        
+        <div class="features-grid">
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Khởi tạo tức thì</h3>
+                <p class="feature-description">
+                    Máy chủ được tạo và sẵn sàng hoạt động chỉ trong vòng 30 giây. Không cần chờ đợi, bắt đầu chơi ngay lập tức.
                 </p>
-                <div class="hero-buttons">
-                    <a href="https://id.asakacloud.vn/store" class="btn btn-primary-large">Tạo máy chủ Game</a>
-                    <a href="https://discord.gg/asakacloud" class="btn btn-secondary-large">Tư vấn ngay về máy chủ</a>
-                </div>
+            </div>
+
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">🛟</div>
+                <h3 class="feature-title">Hỗ trợ 24/7</h3>
+                <p class="feature-description">
+                    Đội ngũ kỹ thuật Việt Nam luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi qua Discord và ticket system.
+                </p>
+            </div>
+
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">🛡️</div>
+                <h3 class="feature-title">Bảo vệ AntiDDoS Pro</h3>
+                <p class="feature-description">
+                    Hệ thống phòng chống tấn công DDoS Layer 4/7 tiên tiến, tích hợp với XDP Filter, đảm bảo máy chủ luôn ổn định.
+                </p>
+            </div>
+
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">💾</div>
+                <h3 class="feature-title">Sao lưu không giới hạn</h3>
+                <p class="feature-description">
+                    Không giới hạn bản sao lưu, khôi phục dễ dàng với 1 click. An tâm về dữ liệu của bạn.
+                </p>
+            </div>
+
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">🎮</div>
+                <h3 class="feature-title">Cài đặt mod 1-click</h3>
+                <p class="feature-description">
+                    Thư viện mod và plugin phong phú, cài đặt chỉ với 1 click. Forge, Fabric, Paper plugins đều có sẵn.
+                </p>
+            </div>
+
+            <div class="feature-card floating-card animate-on-scroll">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Giá cả hợp lý nhất</h3>
+                <p class="feature-description">
+                    Mức giá cạnh tranh nhất thị trường Việt Nam. Chất lượng cao nhưng chi phí thấp, phù hợp mọi túi tiền.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Asaka Cloud có gì?</h2>
-            <p class="section-subtitle">Chúng tôi mang đến những ưu điểm vượt trội để đảm bảo trải nghiệm máy chủ tốt nhất cho bạn</p>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Khởi tạo tức thì</h3>
-                    <p class="feature-description">
-                        Máy chủ được tạo và sẵn sàng hoạt động chỉ trong vòng 30 giây. Không cần chờ đợi, bắt đầu chơi ngay lập tức.
-                    </p>
-                </div>
+<section id="hardware" class="hardware">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Phần cứng chất lượng cao</h2>
+        <p class="section-subtitle animate-on-scroll">
+            Máy chủ của chúng tôi được xây dựng trên nền tảng phần cứng enterprise hàng đầu
+        </p>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🛟</div>
-                    <h3 class="feature-title">Hỗ trợ 24/7</h3>
-                    <p class="feature-description">
-                        Đội ngũ kỹ thuật Việt Nam luôn sẵn sàng hỗ trợ bạn mọi lúc, mọi nơi qua Discord và ticket system.
-                    </p>
-                </div>
+        <div class="hardware-grid">
+            <div class="hardware-card glass-card animate-on-scroll">
+                <div class="hardware-icon">🖥️</div>
+                <h3 class="hardware-title">CPU Server CLC</h3>
+                <p class="hardware-description">
+                    Intel® Xeon® Gold series và AMD® Ryzen™ 9000 series - 
+                    Chip server chuyên dụng chất lượng cao với hiệu năng vượt trội
+                </p>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
-                    <h3 class="feature-title">Bảo vệ AntiDDoS Pro</h3>
-                    <p class="feature-description">
-                        Hệ thống phòng chống tấn công DDoS Layer 4/7 tiên tiến, tích hợp với XDP Filter, v.v đảm bảo máy chủ luôn ổn định và an toàn.
-                    </p>
-                </div>
+            <div class="hardware-card glass-card animate-on-scroll">
+                <div class="hardware-icon">💿</div>
+                <h3 class="hardware-title">RAM DDR4 ECC</h3>
+                <p class="hardware-description">
+                    Bộ nhớ DDR4 ECC (Error Correcting Code) - 
+                    Tự động phát hiện và sửa lỗi, đảm bảo tính ổn định
+                </p>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">💾</div>
-                    <h3 class="feature-title">Sao lưu không giới hạn</h3>
-                    <p class="feature-description">
-                        Không giới hạn bản sao lưu, khôi phục dễ dàng với 1 click. An tâm về dữ liệu của bạn.
-                    </p>
-                </div>
+            <div class="hardware-card glass-card animate-on-scroll">
+                <div class="hardware-icon">💾</div>
+                <h3 class="hardware-title">SSD NVMe</h3>
+                <p class="hardware-description">
+                    Ổ cứng SSD NVMe tốc độ cao - 
+                    Truy xuất dữ liệu nhanh chóng, giảm lag tối đa
+                </p>
+            </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3 class="feature-title">Cài đặt mod 1-click</h3>
-                    <p class="feature-description">
-                        Thư viện mod và plugin phong phú, cài đặt chỉ với 1 click. Forge, Fabric, Paper plugins đều có sẵn.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3 class="feature-title">Giá cả hợp lý nhất</h3>
-                    <p class="feature-description">
-                        Mức giá cạnh tranh nhất thị trường Việt Nam. Chất lượng cao nhưng chi phí thấp, phù hợp mọi túi tiền.
-                    </p>
-                </div>
+            <div class="hardware-card glass-card animate-on-scroll">
+                <div class="hardware-icon">🌐</div>
+                <h3 class="hardware-title">Port 40Gbps</h3>
+                <p class="hardware-description">
+                    Kết nối mạng 40Gbps với băng thông không giới hạn - 
+                    Trải nghiệm mượt mà, ping thấp nhất
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <h2 class="section-title">Chọn gói phù hợp với nhu cầu của bạn</h2>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Basic</h3>
-                        <p class="pricing-tagline">Lựa chọn cơ bản</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">Intel® Xeon® E5 2697v3</div>
-                        <div class="spec-item">RAM từ 3GB</div>
-                        <div class="spec-item">SSD NVMe</div>
-                        <div class="spec-item">10Gbps port</div>
-                        <div class="spec-item">Datacenter VNPT</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">25,000 VND</p>
-                        <a href="https://id.asakacloud.vn/store/Basic-Minecraft-Hosting" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="badge">BEST SELLER</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Balanced</h3>
-                        <p class="pricing-tagline">Cân bằng hiệu năng</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">Intel® Xeon® Gold 6150</div>
-                        <div class="spec-item">RAM từ 2GB</div>
-                        <div class="spec-item">SSD NVMe</div>
-                        <div class="spec-item">10Gbps port</div>
-                        <div class="spec-item">Datacenter VNPT</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">60,000 VND</p>
-                        <a href="https://id.asakacloud.vn/store/Balanced-Minecraft-Hosting" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card premium">
-                    <div class="badge badge-premium">HIGH PERFORMANCE</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Ryzen</h3>
-                        <p class="pricing-tagline">Công nghệ mới nhất</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">AMD® Ryzen™ 9 9900X/9950X</div>
-                        <div class="spec-item">RAM từ 8GB</div>
-                        <div class="spec-item">SSD NVMe</div>
-                        <div class="spec-item">10Gbps port</div>
-                        <div class="spec-item">Datacenter VNPT</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">400,000 VND</p>
-                        <a href="https://asakacloud.vn/ryzen-hosting" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Performance</h3>
-                        <p class="pricing-tagline">Hiệu năng tối ưu</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">Intel® Xeon® Gold 6146</div>
-                        <div class="spec-item">RAM từ 4GB</div>
-                        <div class="spec-item">SSD NVMe U2</div>
-                        <div class="spec-item">10Gbps port</div>
-                        <div class="spec-item">Datacenter VNPT</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">75,000 VND</p>
-                        <a href="https://asakacloud.vn/performance-hosting" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">VPS Server</h3>
-                        <p class="pricing-tagline">Virtual Private Server</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">Intel® Xeon® Gold 6150</div>
-                        <div class="spec-item">RAM từ 4GB</div>
-                        <div class="spec-item">SSD NVMe U2</div>
-                        <div class="spec-item">10Gbps port</div>
-                        <div class="spec-item">Datacenter VNPT</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">75,000 VND</p>
-                        <a href="https://id.asakacloud.vn/store/vps-gold-nvme-u2" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="badge badge-dedicated">TÀI NGUYÊN ĐỘC LẬP</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Dedicated Server</h3>
-                        <p class="pricing-tagline">Máy chủ vật lý độc lập</p>
-                    </div>
-                    <div class="pricing-specs">
-                        <div class="spec-item">Intel/AMD</div>
-                        <div class="spec-item">RAM DDR4/DDR5</div>
-                        <div class="spec-item">SSD NVMe</div>
-                        <div class="spec-item">10Gbps+ port</div>
-                        <div class="spec-item">Datacenter HCM</div>
-                        <div class="spec-item">Firewall AntiDDoS Pro</div>
-                    </div>
-                    <div class="pricing-footer">
-                        <p class="pricing-from">Chỉ từ</p>
-                        <p class="pricing-price">600,000 VND</p>
-                        <a href="https://asakacloud.vn/dedicated-server" class="btn-pricing">Xem chi tiết →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swipe-hint">← Vuốt để xem thêm gói →</div>
-            
-            <div class="view-all">
-                <a href="https://id.asakacloud.vn/store" class="btn btn-outline">Xem Chi Tiết Gói Dịch Vụ</a>
-            </div>
-
-            <div class="extra-info">
-                <h3>Vẫn chưa đủ?</h3>
-                <p>Tham khảo các giải pháp Dedicated Server của chúng tôi dành cho những dự án yêu cầu hiệu năng cao và tùy chỉnh hoàn toàn.</p>
-                <a href="https://discord.gg/asakacloud" class="btn btn-secondary">Chat tư vấn với đội ngũ Asaka</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="hardware" class="hardware">
-        <div class="container">
-            <h2 class="section-title">Phần cứng chất lượng cao</h2>
-            <p class="section-subtitle">
-                Máy chủ của chúng tôi được xây dựng trên nền tảng phần cứng enterprise hàng đầu, 
-                đảm bảo hiệu năng ổn định và độ tin cậy tuyệt đối cho mọi máy chủ.
-            </p>
-
-            <div class="hardware-grid">
-                <div class="hardware-card">
-                    <h3 class="hardware-title">CPU Server CLC</h3>
-                    <p class="hardware-description">
-                        Intel® Xeon® Gold series và AMD® Ryzen™ 9000 series - 
-                        Chip server chuyên dụng chất lượng cao với hiệu năng vượt trội
-                    </p>
-                </div>
-
-                <div class="hardware-card">
-                    <h3 class="hardware-title">RAM DDR4 ECC</h3>
-                    <p class="hardware-description">
-                        Bộ nhớ DDR4 ECC (Error Correcting Code) - 
-                        Tự động phát hiện và sửa lỗi, đảm bảo tính ổn định
-                    </p>
-                </div>
-
-                <div class="hardware-card">
-                    <h3 class="hardware-title">SSD NVMe</h3>
-                    <p class="hardware-description">
-                        Ổ cứng SSD NVMe tốc độ cao - 
-                        Truy xuất dữ liệu nhanh chóng, giảm lag tối đa
-                    </p>
-                </div>
-
-                <div class="hardware-card">
-                    <h3 class="hardware-title">Port 40Gbps</h3>
-                    <p class="hardware-description">
-                        Kết nối mạng 40Gbps với băng thông không giới hạn - 
-                        Trải nghiệm mượt mà, ping thấp nhất có thể
-                    </p>
-                </div>
-            </div>
-
-            <div class="datacenter-section">
-                <div class="datacenter-info">
-                    <h3>Server chất lượng cao</h3>
-                    <ul class="datacenter-features">
-                        <li>Datacenter FPT/CMC/VNPT</li>
-                        <li>Nguồn điện dự phòng</li>
-                        <li>Bảo vệ RAID phần cứng</li>
-                        <li>Giám sát phần cứng 24/7</li>
-                    </ul>
-                </div>
-                <div class="datacenter-image">
-                    <img src="https://img.zyndata.vn/landingpage/epyccpu-n31.png" alt="VNPT Datacenter" />
-                    <p class="image-caption">Phù hợp với các dự án lớn</p>
-                </div>
-            </div>
-
-            <div class="stats-section">
-                <div class="datacenter-network">
-                    <img src="https://img.zyndata.vn/landingpage/datacenter/vnpt-dc-3.png" alt="VNPT Network Infrastructure" />
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-value">99.9%</div>
-                        <div class="stat-label">Uptime</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">&lt; 30ms</div>
-                        <div class="stat-label">Latency</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">24/7</div>
-                        <div class="stat-label">Support</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="software">
-        <div class="container">
-            <h2 class="section-title">Phần mềm được hỗ trợ</h2>
-            <p class="section-subtitle">
-                Asaka Cloud hỗ trợ đa dạng các phần mềm và nền tảng, đáp ứng mọi nhu cầu triển khai của bạn
-            </p>
-            
-            <div class="software-carousel">
-                <div class="software-track">
-                    <div class="software-item">Paper</div>
-                    <div class="software-item">Purpur</div>
-                    <div class="software-item">Folia</div>
-                    <div class="software-item">Forge</div>
-                    <div class="software-item">Fabric</div>
-                    <div class="software-item">Leaf</div>
-                    <div class="software-item">BungeeCord</div>
-                    <div class="software-item">Velocity</div>
-                    <div class="software-item">Vanilla</div>
-                    <div class="software-item">Bedrock</div>
-                    <div class="software-item">Node.js Discord Bot</div>
-                    <div class="software-item">Python Discord Bot</div>
-                    <div class="software-item">ARK</div>
-                    <div class="software-item">SAMP:OMP</div>
-                    <div class="software-item">Paper</div>
-                    <div class="software-item">Purpur</div>
-                    <div class="software-item">Folia</div>
-                    <div class="software-item">Forge</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="comparison">
-        <div class="container">
-            <h2 class="section-title">So sánh các loại dịch vụ máy chủ</h2>
-            <p class="section-subtitle">
-                Hiểu rõ sự khác biệt giữa dịch vụ Asaka Cloud và các dịch vụ khác để lựa chọn phù hợp nhất.
-            </p>
-
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Tính năng</th>
-                            <th>Asaka Cloud</th>
-                            <th>Dịch vụ khác</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Hiệu năng</td>
-                            <td class="highlight-cell">Cao</td>
-                            <td>Trung bình</td>
-                        </tr>
-                        <tr>
-                            <td>Khởi tạo nhanh</td>
-                            <td class="highlight-cell">Nhanh chóng, dưới 15s</td>
-                            <td>Tùy vào loại CPU</td>
-                        </tr>
-                        <tr>
-                            <td>Bảo vệ DDoS</td>
-                            <td class="highlight-cell">AntiDDoS Pro</td>
-                            <td>Cơ bản</td>
-                        </tr>
-                        <tr>
-                            <td>Sao lưu tự động</td>
-                            <td class="highlight-cell">Có</td>
-                            <td>?</td>
-                        </tr>
-                        <tr>
-                            <td>Cài đặt mod/plugin</td>
-                            <td class="highlight-cell">1-click</td>
-                            <td>Thủ công</td>
-                        </tr>
-                        <tr>
-                            <td>Hỗ trợ kỹ thuật</td>
-                            <td class="highlight-cell">24/7</td>
-                            <td>Có giới hạn</td>
-                        </tr>
-                        <tr>
-                            <td>Giá thành</td>
-                            <td class="highlight-cell">Hợp lý</td>
-                            <td>Trung bình/cao</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
+<section class="cta">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
             <h2 class="cta-title">Sẵn Sàng Tạo Máy Chủ Game?</h2>
             <p class="cta-description">
                 Khởi tạo máy chủ game của riêng bạn chỉ trong vài phút. 
-                Hệ thống tự động kích hoạt, bảo mật cao và đội ngũ hỗ trợ 24/7 sẵn sàng giúp đỡ khi cần thiết.
+                Hệ thống tự động kích hoạt, bảo mật cao và đội ngũ hỗ trợ 24/7.
             </p>
             <div class="cta-buttons">
-                <a href="https://id.asakacloud.vn/" class="btn btn-primary-large">Tạo Máy Chủ Ngay</a>
+                <a href="{{ url_for('services') }}" class="btn btn-primary-large">Tạo Máy Chủ Ngay</a>
                 <a href="https://discord.gg/asakacloud" class="btn btn-secondary-large">Tham Gia Discord</a>
             </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://img.zyndata.vn/asakacloud.svg" alt="AsakaCloud" class="logo-img">
-                    <p>Minecraft Server Hosting #1 Vietnam</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h4>Dịch vụ</h4>
-                        <a href="https://id.asakacloud.vn/store">Minecraft Hosting</a>
-                        <a href="https://asakacloud.vn/vps">VPS Server</a>
-                        <a href="https://asakacloud.vn/dedicated-server">Dedicated Server</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Hỗ trợ</h4>
-                        <a href="https://discord.gg/asakacloud">Discord</a>
-                        <a href="https://id.asakacloud.vn/submitticket.php">Ticket System</a>
-                        <a href="https://asakacloud.vn/docs">Tài liệu</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Công ty</h4>
-                        <a href="https://asakacloud.vn/about">Về chúng tôi</a>
-                        <a href="https://asakacloud.vn/terms">Điều khoản</a>
-                        <a href="https://asakacloud.vn/privacy">Chính sách</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 AsakaCloud. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+</section>
+{% endblock %}
