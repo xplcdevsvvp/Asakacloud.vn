@@ -7,8 +7,10 @@ export default defineConfig({
     port: 3000,
   },
   build: {
-    // Output the built site into frontend/dist so GitHub Actions can publish it
-    outDir: 'frontend/dist',
+    // Output the built site into `dist` (this runs inside the `frontend/` folder)
+    // GitHub Actions runs `npm run build` with working-directory = ./frontend,
+    // so the correct output folder is `frontend/dist` on the repo root.
+    outDir: 'dist',
     emptyOutDir: true,
   },
 })
