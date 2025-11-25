@@ -1,53 +1,92 @@
-# AsakaCloud Clone Website
+# AsakaCloud - Minecraft Server Hosting #1 Vietnam
 
-Bản sao chép website AsakaCloud.vn - Minecraft Server Hosting #1 Vietnam
+Trang web chính thức của AsakaCloud - dịch vụ cho thuê máy chủ Minecraft hàng đầu tại Việt Nam.
 
-## Cấu trúc dự án
+## 🎮 Tính Năng
 
-```
-.
-├── index.html       # File HTML chính (bắt buộc ở root cho GitHub Pages)
-├── styles.css       # File CSS cho styling
-├── script.js        # File JavaScript cho animations và interactions
-└── README.md        # File hướng dẫn này
-```
+- ⚡ **Khởi tạo tức thì** - Máy chủ được tạo chỉ trong 30 giây
+- 🛟 **Hỗ trợ 24/7** - Đội ngũ Việt Nam luôn sẵn sàng
+- 🛡️ **Bảo vệ DDoS Pro** - Hệ thống phòng chống tấn công tiên tiến
+- 💾 **Sao lưu không giới hạn** - Khôi phục dữ liệu dễ dàng
+- 🎮 **Cài đặt mod 1-click** - Forge, Fabric, Paper có sẵn
+- 💰 **Giá hợp lý nhất** - Chất lượng cao, chi phí thấp
 
-## Deploy lên GitHub Pages
+## 🚀 Tech Stack
 
-### Bước 1: Tạo repository trên GitHub
-1. Đăng nhập vào GitHub
-2. Tạo repository mới (ví dụ: `asakacloud-clone`)
-3. **KHÔNG** chọn "Initialize with README" (vì đã có README.md)
+- **Frontend:** React 18 + Vite
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Design:** Dark theme neon tech gaming
 
-### Bước 2: Push code lên GitHub
+## 📦 Cài Đặt & Chạy
+
 ```bash
-git init
+cd frontend
+npm install
+npm run dev
+```
+
+## 🔨 Build
+
+```bash
+cd frontend
+npm run build
+```
+
+## 📝 Cấu Trúc Project
+
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   └── Footer.jsx
+│   ├── pages/
+│   │   ├── Hero.jsx
+│   │   ├── Packages.jsx
+│   │   ├── Features.jsx
+│   │   ├── Software.jsx
+│   │   └── Commitment.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html
+├── vite.config.js
+├── tailwind.config.js
+└── package.json
+```
+
+## 🌐 Deploy lên GitHub Pages
+
+### Bước 1: Build project
+```bash
+cd frontend
+npm run build
+```
+
+### Bước 2: Tạo branch gh-pages
+```bash
 git add .
-git commit -m "Initial commit - AsakaCloud clone website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git commit -m "Build: AsakaCloud React website"
 git push -u origin main
 ```
 
-### Bước 3: Kích hoạt GitHub Pages
-1. Vào repository trên GitHub
-2. Click vào **Settings** (Cài đặt)
-3. Scroll xuống phần **Pages** (ở sidebar bên trái)
-4. Trong phần **Source**:
-   - Chọn branch: `main`
-   - Chọn folder: `/ (root)`
-5. Click **Save**
-6. Đợi vài giây, GitHub sẽ hiển thị URL của website
+### Bước 3: Deploy trên Settings
+1. Vào GitHub Settings → Pages
+2. Source: Deploy from branch
+3. Branch: `main` → folder: `/frontend/dist`
+4. Save
 
-### Bước 4: Truy cập website
-Website sẽ có URL dạng: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
+Website sẽ có URL: `https://YOUR_USERNAME.github.io/Asakacloud/`
 
-## Tính năng
+## 📧 Liên Hệ
 
-✅ **100% Responsive** - Hoạt động tốt trên mọi thiết bị (desktop, tablet, mobile)
+- Discord: https://discord.gg/asakacloud
+- Email: support@asakacloud.vn
 
-✅ **Sao chép chính xác** - Giống y chang website AsakaCloud.vn gốc:
-- Hero section với gradient text
+## 📄 License
+
+© 2025 AsakaCloud. All rights reserved.
 - 6 tính năng chính
 - 6 gói pricing (Basic, Balanced, Ryzen, Performance, VPS, Dedicated)
 - Section phần cứng với thông số kỹ thuật
