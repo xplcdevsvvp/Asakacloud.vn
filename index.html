@@ -10,8 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="root"></div>
-    <!-- Entry points live under /frontend/src for this repo layout -->
-    <script type="module" src="/frontend/src/main.jsx"></script>
+        <div id="root"></div>
+        <!-- Entry points live under /frontend/src for this repo layout -->
+        <script type="module" src="/frontend/src/main.jsx"></script>
+
+        <!-- Fallback message for users opening index.html directly (no dev server) -->
+        <style>
+            .dev-fallback { position: fixed; inset: 0; display:flex; align-items:center; justify-content:center; background: rgba(13,13,13,0.95); color: #C9C9C9; font-family: Inter, Poppins, sans-serif; z-index:9999 }
+            .dev-fallback .box { max-width:720px; padding:28px; border-radius:12px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(79,140,255,0.06); text-align:center }
+            .dev-fallback h2 { color:#FFFFFF; margin-bottom:8px }
+            .dev-fallback p { margin-bottom:16px; color:#C9C9C9 }
+            .dev-fallback a { display:inline-block; padding:10px 16px; border-radius:8px; background:linear-gradient(90deg,#4F8CFF,#7A5CFF); color:#fff; text-decoration:none }
+        </style>
+        <div class="dev-fallback" id="devFallback" aria-hidden="true">
+            <div class="box">
+                <h2>Website cần chạy dev server / build</h2>
+                <p>Bạn đang mở file này trực tiếp. Để xem website đầy đủ, hãy chạy development server hoặc build trước.</p>
+                <p>
+                    <a href="./DEPLOYMENT.md" target="_blank">Xem hướng dẫn deploy & chạy</a>
+                </p>
+                <p style="margin-top:12px;color:#9A9A9A;font-size:13px">Tip: Cài Node.js → chạy <code>npm install</code> và <code>npm run dev</code> trong thư mục <code>frontend/</code></p>
+            </div>
+        </div>
+        <script>
+            // If the module script loads and app mounts successfully, hide the fallback overlay.
+            window.addEventListener('DOMContentLoaded', function(){
+                // Try to detect if React app mounted by checking #root's children after short delay
+                setTimeout(function(){
+                    var root = document.getElementById('root');
+                    if (root && root.children.length>0) {
+                        var el = document.getElementById('devFallback');
+                        if (el) el.style.display='none';
+                    }
+                }, 800);
+            });
+        </script>
 </body>
 </html>
